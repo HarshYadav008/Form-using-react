@@ -1,8 +1,19 @@
-"homepage": "https://HarshYadav008.github.io/Form-using-react",
+{
+  "name": "form-app",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://HarshYadav008.github.io/Form-using-react",
+  "dependencies": { ... },
+  "devDependencies": { ... },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
 
 
 {
-  "name": "practice-app",
+  "name": "form-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
