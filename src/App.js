@@ -1,8 +1,6 @@
-// App.js
 import React, { useState, useEffect } from 'react';
 
 const App = () => {
-    // State for form fields
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -11,17 +9,14 @@ const App = () => {
         phone: '',
     });
 
-    // State for form validation messages
     const [errors, setErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    // Handle input changes
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
 
-    // Validate form
     const validate = () => {
         let tempErrors = {};
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -36,7 +31,6 @@ const App = () => {
         return tempErrors;
     };
 
-    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
         const tempErrors = validate();
@@ -47,14 +41,12 @@ const App = () => {
         }
     };
 
-    // Show alert on successful submission
     useEffect(() => {
         if (isSubmitted) {
             alert('Form submitted successfully');
         }
     }, [isSubmitted]);
 
-    // Basic styling
     const formStyle = {
         maxWidth: '400px',
         margin: 'auto',
